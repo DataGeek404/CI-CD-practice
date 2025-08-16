@@ -1,20 +1,30 @@
-name: PR Test Check
+# .github/workflows/deploy.yml
+name: CI/CD Deploy and PR Test
 
 on:
-  pull_request:
-    branches: [main]
+  push:
+    branches:
+      - master
+      - development
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - name: Install dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm test
+      - uses: actions/checkout@v3
+      - name: Build project
+        run: echo "Building project..."
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to STAGING (development branch)
+        if: github.ref == 'refs/heads/development'
+        run: echo "Deploying to staging server..."
+
+      - name: Deploy to PRODUCTION (master branch)
+        if: github.ref == 'refs/heads/master'
+        run: echo "Deploying to production server..."

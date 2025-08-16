@@ -30,3 +30,15 @@ It demonstrates how to integrate source control, automated builds, testing, and 
 ```bash
 git clone https://github.com/<your-username>/CI-CD-practice.git
 cd CI-CD-practice
+
+
+## 🔄 CI/CD Workflow
+
+1. **Push Code** → Trigger pipeline on GitHub Actions / Jenkins.  
+2. **Build** → Compile or containerize the application.  
+3. **Test** → Run automated tests.  
+4. **Deploy** → Push to staging or production environment.  
+5. **Monitor** → Ensure health checks and logging are in place.  
+
+
+
