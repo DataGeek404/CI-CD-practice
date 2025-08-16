@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | CI/CD Practice</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .feature {
+      flex: 1 1 calc(33% - 1rem);
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      margin: 2rem 0;
+    }
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      .feature {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to CI/CD Practice 🚀</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Automate, Build, Deploy</h2>
+      <p>Learn the fundamentals of DevOps CI/CD with real-world examples.</p>
+      <img src="https://picsum.photos/900/300" alt="CI/CD Pipeline Banner">
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/000000/github.png" alt="GitHub">
+        <h3>Source Control</h3>
+        <p>Manage your code with Git and GitHub for efficient collaboration.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/000000/jenkins.png" alt="CI/CD">
+        <h3>Continuous Integration</h3>
+        <p>Automated pipelines with GitHub Actions and Jenkins.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/000000/docker.png" alt="Docker">
+        <h3>Containerization</h3>
+        <p>Use Docker to build and ship applications faster.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <h2>Project Snapshots</h2>
+      <div class="gallery-grid">
+        <img src="https://picsum.photos/400/250?random=1" alt="Project 1">
+        <img src="https://picsum.photos/400/250?random=2" alt="Project 2">
+        <img src="https://picsum.photos/400/250?random=3" alt="Project 3">
+        <img src="https://picsum.photos/400/250?random=4" alt="Project 4">
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DevOps CI/CD Practice</p>
+  </footer>
+</body>
+</html>
